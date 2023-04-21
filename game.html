@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tao Hoang">
+    <title>Spot the Scam!</title>
+    <link rel="stylesheet" href="gamestyles.css" />
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html">Home</a>
+        <a href="./scam-article.html" id="curr">How to Spot a Scam</a>
+        <a href="./info.html">Other Info</a>
+    </header>
+
+    <h1>Spot The Scam!</h1>
+    <p id="score"> 0</p>
+    <img id="" src="" />
+
+    <div id="your-results">
+        <p>Your Results!</p>
+        <p>Refresh to play again</p>
+    </div>
+
+    <script>
+        let score = 0; 
+
+        let answer = document.querySelector ("#");
+
+        let scoreText = document.querySelector ("#score");
+
+        let gameOver = document.querySelector ("#your-results");
+
+        function points () {
+            score = score + 1;
+            scoreText.innerHTML = score;
+        }
+
+        answer.addEventListener('click', points);
+
+        function end (){
+            interval = clearInterval(interval);
+            gameOver.style.display = "block";
+        }
+        
+        setTimeout(end, 60000);
+
+        var timeout = setTimeout(function() {}, 3600 * 1000);
+
+setInterval(function() {
+    console.log('Time left: '+getTimeLeft(timeout)+'s');
+}, 2000);
+
+
+document.getElementById('Toggle').onclick = toggle;
+
+    </script>
+</body>
+
+</html>
